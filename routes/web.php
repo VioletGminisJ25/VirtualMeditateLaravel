@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('tiers', TierController::class);
-Route::resource('glasses', GlassController::class);
+Route::resource('tiers', TierController::class)->middleware('auth');
+Route::resource('glasses', GlassController::class)->middleware('auth');
 
 
 
