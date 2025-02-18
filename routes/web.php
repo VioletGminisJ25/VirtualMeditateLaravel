@@ -18,7 +18,7 @@ use App\Http\Controllers\GlassController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
