@@ -6,6 +6,7 @@ use App\Models\Glass;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Requests\GlassRequest;
+use App\Models\Tier;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
@@ -28,8 +29,9 @@ class GlassController extends Controller
     public function create(): View
     {
         $glass = new Glass();
+        $tiers = Tier::pluck('name','id');
 
-        return view('glass.create', compact('glass'));
+        return view('glass.create', compact('glass','tiers'));
     }
 
     /**
@@ -59,8 +61,9 @@ class GlassController extends Controller
     public function edit($id): View
     {
         $glass = Glass::find($id);
+        $tiers = Tier::pluck('name', 'id');
 
-        return view('glass.edit', compact('glass'));
+        return view('glass.edit', compact('glass','tiers'));
     }
 
     /**

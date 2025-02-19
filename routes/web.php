@@ -18,7 +18,7 @@ use App\Http\Controllers\GlassController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('tiers', TierController::class);
-Route::resource('glasses', GlassController::class);
+Route::resource('tiers', TierController::class)->middleware('auth');
+Route::resource('glasses', GlassController::class)->middleware('auth');
 
 
 
