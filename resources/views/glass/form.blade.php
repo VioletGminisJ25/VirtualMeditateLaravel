@@ -18,7 +18,7 @@
     <div>
         {{-- <x-text-input id="tiers_id" name="tiers_id" type="text" class="mt-1 block w-full" :value="old('tiers_id', $glass?->tiers_id)" autocomplete="tiers_id" placeholder="Tiers Id"/> --}}
        <div x-data="{ open: false, selectedTier: '{{ old('tiers_id', $glass?->tiers_id) }}' }" class="relative">
-        <x-input-label for="tiers_id" :value="__('Tiers Id')" />
+        <x-input-label for="tiers_id" :value="__('Tiers')" />
 
         {{-- Botón que abre el dropdown --}}
         <button type="button" @click="open = ! open"
@@ -36,7 +36,7 @@
             <div class="py-1">
                 @foreach($tiers as $id => $name)
                     <a href="#" @click.prevent="selectedTier = '{{ $id }}'; open = false"
-                       class="block px-4 py-2 text-sm text-gray-500 dark:text-gray-100">
+                       class="block px-4 py-2 text-sm text-gray-500 dark:text-gray-100  ">
                         {{ $name }}
                     </a>
                 @endforeach
