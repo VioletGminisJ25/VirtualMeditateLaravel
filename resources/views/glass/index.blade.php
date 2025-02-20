@@ -37,7 +37,7 @@
                                     </thead>
                                     <tbody class="divide-y bg-white dark:bg-gray-800">
                                     @foreach ($glasses as $glass)
-                                        <tr class="even:bg-gray-800">
+                                        <tr class="bg-white dark:bg-gray-800">
                                             <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-semibold text-gray-900 dark:text-gray-100">{{ ++$i }}</td>
 
 										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-gray-100">{{ $glass->name }}</td>
