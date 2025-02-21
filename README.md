@@ -86,5 +86,5 @@ Este proyecto es de código abierto bajo la licencia MIT.
 
 ---
 
-✨ *Desarrollado con Laravel, pasión y café ☕ por Javier Santos Rodal* ✨
+✨ *Desarrollado con Laravel por Javier Santos Rodal* ✨
 
